@@ -1,0 +1,145 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: #74496d url("/assets/images/photo.jpg") center top no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  font-family: "lato";
+  font-size: 1em;
+  line-height: 1.5; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "lust-display";
+  line-height: 1.25em;
+  margin: 0;
+  text-rendering: optimizeLegibility; }
+
+h1 {
+  font-size: 2.25em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.75em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h5 {
+  font-size: 1.25em; }
+
+h6 {
+  font-size: 1em; }
+
+p {
+  margin: 0 0 0.75em; }
+
+a {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  color: #fc693e;
+  text-decoration: none; }
+  a:hover {
+    color: white; }
+  a:active, a:focus {
+    color: white;
+    outline: none; }
+
+hr {
+  border-bottom: 1px solid #DDD;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0; }
+
+img {
+  margin: 0;
+  max-width: 100%; }
+
+blockquote {
+  border-left: 2px solid #DDD;
+  color: white;
+  margin: 1.5em 0;
+  padding-left: 0.75em; }
+
+cite {
+  color: white;
+  font-style: italic; }
+  cite:before {
+    content: '\2014 \00A0'; }
+
+.temp-intro {
+  max-width: 73.75em;
+  margin-left: auto;
+  margin-right: auto; }
+  .temp-intro:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .temp-intro h1 {
+    font-size: 3em;
+    color: #fc693e;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 20%;
+    font-weight: normal; }
+    @media screen and (min-width: 40em) {
+      .temp-intro h1 {
+        font-size: 4.5em; } }
+  .temp-intro h2 {
+    font-family: "lato";
+    font-weight: 400;
+    text-align: center;
+    font-size: 1em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: .5em 0 2em 0; }
+    @media screen and (min-width: 40em) {
+      .temp-intro h2 {
+        font-size: 1.5em;
+        letter-spacing: 6.5px; } }
+  .temp-intro p {
+    font-weight: 400;
+    font-size: 1.5em;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1em; }
+    @media screen and (min-width: 40em) {
+      .temp-intro p {
+        font-size: 1.75em; } }
+  .temp-intro .social-links {
+    max-width: 800px;
+    margin: 3em auto 0 auto;
+    list-style-type: none;
+    padding: 0;
+    text-align: center; }
+    .temp-intro .social-links li {
+      display: inline-block;
+      margin-right: 1em; }
+      @media screen and (min-width: 40em) {
+        .temp-intro .social-links li {
+          margin-right: 2em; } }
+      .temp-intro .social-links li:last-child {
+        margin-right: 0; }
+      .temp-intro .social-links li a {
+        opacity: .8; }
+        .temp-intro .social-links li a:hover {
+          opacity: 1; }
+      .temp-intro .social-links li img {
+        max-width: 40px; }
+
+/* No files to import found in vendor/* */
+
+/*# sourceMappingURL=style.css.map */
