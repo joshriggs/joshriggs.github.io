@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #74496d url("/assets/images/photo.jpg") center top no-repeat;
+  background: #74496d url("/assets/images/photo.jpg") right top no-repeat;
   background-size: cover;
   background-attachment: fixed;
   margin: 0;
@@ -45,13 +45,17 @@ p {
   margin: 0 0 0.75em; }
 
 a {
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
   color: #fc693e;
   text-decoration: none; }
   a:hover {
-    color: white; }
+    color: white;
+    border-bottom: solid 2px #fc693e;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear; }
   a:active, a:focus {
     color: white;
     outline: none; }
@@ -136,7 +140,8 @@ cite {
       .temp-intro .social-links li a {
         opacity: .8; }
         .temp-intro .social-links li a:hover {
-          opacity: 1; }
+          opacity: 1;
+          border-bottom: 0; }
       .temp-intro .social-links li img {
         max-width: 40px; }
 

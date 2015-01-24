@@ -42,12 +42,14 @@ p {
 }
 
 a {
-  @include transition(color 0.1s linear);
+  @include transition(all 0.1s linear);
   color: $base-link-color;
   text-decoration: none;
 
   &:hover {
     color: $hover-link-color;
+    border-bottom: solid 2px $orange;
+    @include transition(all 0.1s linear)
   }
 
   &:active, &:focus {
