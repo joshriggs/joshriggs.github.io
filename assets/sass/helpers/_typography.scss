@@ -10,32 +10,54 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
   line-height: $header-line-height;
   margin: 0;
+  font-weight: 400;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 
 h1 {
-  font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
+  color: $dark-purple;
+  text-align: center;
+  font-size: $base-font-size * 1.5; // 16 * 1.75 = 28px
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  @include media($medium-screen) {
+    font-size: $base-font-size * 2; // 16 * 2.25 = 36px
+  }
 }
 
 h2 {
-  font-size: $base-font-size * 2; // 16 * 2 = 32px
+  font-size: $base-font-size * 1.25; // 16 * 1.5 = 24px
+  @include media($medium-screen) {
+    font-size: $base-font-size * 1.75; // 16 * 2 = 32px
+  }
 }
 
 h3 {
-  font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
+  font-size: $base-font-size * 1.125; // 16 * 1.25 = 20px
+
+  @include media($medium-screen) {
+    font-size: $base-font-size * 1.5; // 16 * 1.75 = 28px
+  }
 }
 
 h4 {
-  font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
+  font-size: $base-font-size * 1; // 16 * 1.125 = 18px
+
+  @include media($medium-screen) {
+    font-size: $base-font-size * 1.125; // 16 * 1.5 = 24px
+  }
 }
 
 h5 {
-  font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
+  font-size: $base-font-size; 
 }
 
 h6 {
   font-size: $base-font-size;
 }
+
+
+//custom headings 
 
 p {
   margin: 0 0 ($base-line-height * .5);
@@ -48,7 +70,6 @@ a {
 
   &:hover {
     color: $hover-link-color;
-    border-bottom: solid 2px $orange;
     @include transition(all 0.1s linear)
   }
 

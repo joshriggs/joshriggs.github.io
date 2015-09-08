@@ -1,0 +1,22 @@
+.recent-work {
+  padding: $gutter * 2 0;
+}
+
+h1 {
+  margin-bottom: $gutter;
+}
+
+.portfolio-links__item {
+  width: 100%;
+
+  @include media($medium-screen) {
+    float: left;
+    width: 50%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+}

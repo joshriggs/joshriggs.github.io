@@ -1,0 +1,130 @@
+.intro {
+   background: #74496d url('/assets/images/photo.jpg') right top no-repeat;
+   background-size: cover; 
+   position: relative;
+   padding: 4em 0 2em 0;
+   min-height: 440px;
+
+   @include media($medium-screen) {
+    height: em(640);
+   }
+
+   @include media($medium-large-screen) {
+    height: em(760);
+   }
+
+   @include media(large-screen) {
+    height: em(900);
+   }
+
+
+  .site-title {
+    display: none;
+
+    @include media($medium-large-screen) {
+      display: block;
+      position: absolute;
+      left: 1em;
+      top: .66em;
+      font-size: 1.5em;
+      font-weight: normal;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .name {
+      font-weight: 800;
+      color: $orange;
+    }
+  }
+
+  .intro-text {
+    
+    @include media($medium-screen) {
+      position: absolute;
+      width: 100%;
+      bottom: 4em;
+    }
+
+  }
+
+  h1{
+    
+    font-size: 3em;
+    color: white;
+    margin-bottom: .5em;
+    text-align: center;
+    text-transform: initial;
+    font-weight: 800;
+    @include media($medium-screen) {
+      font-size: 4.5em;
+    }
+  }
+
+  h2 {
+    font-family: "lato";
+    font-weight: 400;
+    text-align: center;
+    font-size: 1em; 
+    color: white;
+    text-transform: uppercase;
+    margin: .5em 0 2em 0;
+
+    @include media($medium-screen) {
+      font-size: 1.5em;
+      letter-spacing: 6.5px;
+    }
+  }
+
+  p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.25em;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1em; 
+
+    @include media($medium-screen) {
+      font-size: 1.5em;
+    }
+  }
+
+  a:hover {
+    border-bottom: solid 2px $orange;
+  }
+
+  .social-links {
+    max-width: 800px;
+    margin: 3em auto 0 auto;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin-right: .75em;
+
+      @include media($medium-screen) {
+        margin-right: 2em;
+      }
+      
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        opacity: .8;
+
+        &:hover {
+          opacity: 1;
+          border-bottom: 0;
+        }
+      }
+
+      img{
+        max-width: 40px;
+      }
+    }
+  }
+}
