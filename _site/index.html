@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="">
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="/assets/js/jquery.waypoints.js"></script>
-    <script src="/assets/js/sticky.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
     <script src="/assets/js/modernizr.js"></script>
+    <script src="/assets/js/main.js"></script>
    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900,400italic|Fjalla+One' rel='stylesheet' type='text/css'>
     <link rel="canonical" href="/">
 
@@ -26,13 +27,13 @@
     <img src="/assets/images/logo.png">
   </div>
   <ul class="main-nav__links">
-    <li><a href="#"><img src="/assets/images/beard.png"></a></li>
-    <li><a href="#"><img src="/assets/images/work.png"></a></li>
-    <li><a href="#"><img src="/assets/images/plane.png"></a></li>
+    <li><a href="#intro"><img src="/assets/images/beard.svg"></a></li>
+    <li><a href="#recent-work"><img src="/assets/images/work.svg"></a></li>
+    <li><a href="mailto:josh.riggs@gmail.com"><img src="/assets/images/plane.svg"></a></li>
   </ul>      
 </nav> 
     <div class="page-content">
-      <section class="intro">
+      <section id="intro">
   <div class="site-title">
     <span class="name">Josh Riggs</span> UX / Design / Front End 
   </div>
@@ -50,7 +51,7 @@
     </ul>
   </div>
 </section>
-<section class="recent-work">
+<section id="recent-work">
   <h1>Recent &amp; Favorite Work</h1>
   <ul class="portfolio-links">
     <li class="portfolio-links__item"><img src="/assets/images/thumb-splc.jpg"></li>
@@ -61,7 +62,6 @@
     <li class="portfolio-links__item"><img src="/assets/images/thumb-sony.jpg"></li>
   </ul>
 </section>
-
     </div>
 
     </body>

@@ -1,56 +1,30 @@
 //Insert awesome js here!
 
-//Primary Navigation Menu js
-
-$(document).ready(function() {
-  var menu = $('#navigation-menu');
-  var menuToggle = $('#js-mobile-menu');
-  var signUp = $('.sign-up');
-
-  $(menuToggle).on('click', function(e) {
-    e.preventDefault();
-    menu.slideToggle(function(){
-      if(menu.is(':hidden')) {
-        menu.removeAttr('style');
-      }
-    });
-  });
-
-  // underline under the active nav item
-  $(".nav .nav-link").click(function() {
-    $(".nav .nav-link").each(function() {
-      $(this).removeClass("active-nav-item");
-    });
-    $(this).addClass("active-nav-item");
-    $(".nav .more").removeClass("active-nav-item");
-  });
-
-  //waypoints init
-  var sticky = new Waypoint.Sticky({
-    element: $('.map-large')[0]
-  })
-
-  //dropdown
-  $(document).ready(function(){
-    $(".dropdown-button").click(function() {
-      $(".dropdown-menu").toggleClass("show-menu");
-      $(".dropdown-menu > li").click(function(){
-        $(".dropdown-menu").removeClass("show-menu");
-      });
-      $(".dropdown-menu.dropdown-select > li").click(function() {
-        $(".dropdown-button").html($(this).html());
-      });
-    });
-  });
-
-});
-
-//Refills Expander
-$(document).ready(function() {
-  var expanderTrigger = document.getElementById("js-expander-trigger");
-  var expanderContent = document.getElementById("js-expander-content");
-
-  $('#js-expander-trigger').click(function(){
-    $(this).toggleClass("expander-hidden");
+jQuery(function( $ ){
+  /**
+   * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+   * @see http://demos.flesler.com/jquery/scrollTo/
+   * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.localScroll.
+   */
+  
+  // The default axis is 'y', but in this demo, I want to scroll both
+  // You can modify any default like this
+  $.localScroll.defaults.axis = 'xy';
+  
+  /**
+   * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+   * also affect the >> and << links. I want every link in the page to scroll.
+   */
+  $.localScroll({
+    target: 'body', // could be a selector or a jQuery object too.
+    queue:true,
+    duration:1000,
+    hash:true,
+    onBefore:function( e, anchor, $target ){
+      // The 'this' is the settings object, can be modified
+    },
+    onAfter:function( anchor, settings ){
+      // The 'this' contains the scrolled element (#content)
+    }
   });
 });
