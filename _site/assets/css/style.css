@@ -765,7 +765,7 @@ Copyright (c) 2015 Daniel Eden
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
-.fadeInDown, .main-nav {
+.fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown; }
 
@@ -2641,6 +2641,27 @@ cite {
   cite:before {
     content: '\2014 \00A0'; }
 
+button {
+  display: inline-block;
+  background: transparent;
+  border: solid 2px #74496d;
+  padding: .5em 1em;
+  color: #74496d;
+  text-align: center;
+  font-weight: 800;
+  transition: all .3s; }
+  button:hover {
+    background: #74496d;
+    color: white;
+    transition: all .3s; }
+
+.portfolio-links__item button {
+  color: white;
+  border-color: white; }
+  .portfolio-links__item button:hover {
+    background: white;
+    color: #74496d; }
+
 #intro {
   background: #74496d url("/assets/images/photo.jpg") right top no-repeat;
   background-size: cover;
@@ -2657,7 +2678,8 @@ cite {
     #intro {
       height: 56.25em; } }
   #intro .site-title {
-    display: none; }
+    display: none;
+    animation-duration: .3s; }
     @media screen and (min-width: 47.5em) {
       #intro .site-title {
         display: block;
@@ -2808,16 +2830,65 @@ cite {
 h1 {
   margin-bottom: 1.618em; }
 
+h2 {
+  font-weight: 800;
+  margin-bottom: .25em;
+  font-size: 1.25em;
+  color: white; }
+  @media screen and (min-width: 56.25em) {
+    h2 {
+      font-size: 1.5em; } }
+
+h3 {
+  font-size: 1em;
+  margin-bottom: .75em;
+  color: #fc693e; }
+  @media screen and (min-width: 56.25em) {
+    h3 {
+      color: white; } }
+
 .portfolio-links__item {
-  width: 100%; }
+  position: relative;
+  width: 100%;
+  background: black; }
   @media screen and (min-width: 40em) {
     .portfolio-links__item {
       float: left;
-      width: 50%; } }
+      width: 50%;
+      overflow: hidden; } }
+  @media screen and (min-width: 56.25em) {
+    .portfolio-links__item {
+      background: #fc693e; } }
   .portfolio-links__item img {
     width: 100%;
     height: auto;
-    vertical-align: bottom; }
+    vertical-align: bottom;
+    transition: all .2s;
+    opacity: .5; }
+    @media screen and (min-width: 56.25em) {
+      .portfolio-links__item img {
+        opacity: 1;
+        transition: all .2s; } }
+  .portfolio-links__item button {
+    display: none; }
+    @media screen and (min-width: 56.25em) {
+      .portfolio-links__item button {
+        display: inline-block; } }
+  .portfolio-links__item .portfolio-item-text {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    transition: all .3s; }
+    @media screen and (min-width: 56.25em) {
+      .portfolio-links__item .portfolio-item-text {
+        transform: translateY(300px); } }
+  @media screen and (min-width: 56.25em) {
+    .portfolio-links__item:hover .portfolio-item-text {
+      transform: translateY(0px);
+      transition: all .3s; } }
+  .portfolio-links__item:hover img {
+    opacity: .2; }
 
 /* No files to import found in vendor/* */
 

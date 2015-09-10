@@ -20,6 +20,7 @@
 
   .site-title {
     display: none;
+    animation-duration: .3s;
 
     @include media($medium-large-screen) {
       display: block;

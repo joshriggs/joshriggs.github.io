@@ -6,17 +6,86 @@ h1 {
   margin-bottom: $gutter;
 }
 
-.portfolio-links__item {
-  width: 100%;
+h2 {
+  font-weight: 800;
+  margin-bottom: .25em;
+  font-size: 1.25em;
+  color: white;
 
+  @include media($large-screen) {
+    font-size: 1.5em;
+  }
+}
+
+h3 {
+  font-size: 1em;
+  margin-bottom: .75em;
+  color: $orange;
+
+  @include media($large-screen) {
+    color: white;
+  }
+}
+
+.portfolio-links__item {
+  position: relative;
+  width: 100%;
+  background: black;
+ 
   @include media($medium-screen) {
     float: left;
     width: 50%;
+    overflow: hidden;
+  }
+
+  @include media($large-screen) {
+    background: $orange;
   }
 
   img {
     width: 100%;
     height: auto;
     vertical-align: bottom;
+    transition: all .2s;
+    opacity: .5;
+
+    @include media($large-screen) {
+      opacity: 1;
+      transition: all .2s;
+    }
+  }
+
+  button {
+    @extend %button-white;
+    display: none;
+
+    @include media($large-screen) {
+      display: inline-block;
+    }
+  }
+
+  .portfolio-item-text {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    transition: all .3s;
+
+    @include media($large-screen) {
+      transform: translateY(300px);
+    }
+  }
+
+  &:hover {
+    .portfolio-item-text {
+      @include media($large-screen) {
+        transform: translateY(0px);
+        transition: all .3s;
+      }
+    }
+
+    img {
+      opacity: .2;
+    }
   }
 }
