@@ -2607,15 +2607,15 @@ a {
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
   transition: all 0.1s linear;
-  color: #fc693e;
+  color: #74496d;
   text-decoration: none; }
   a:hover {
-    color: white;
+    color: #fc693e;
     -webkit-transition: all 0.1s linear;
     -moz-transition: all 0.1s linear;
     transition: all 0.1s linear; }
   a:active, a:focus {
-    color: white;
+    color: #fc693e;
     outline: none; }
 
 hr {
@@ -2661,6 +2661,21 @@ button {
   .portfolio-links__item button:hover {
     background: white;
     color: #74496d; }
+
+.fin {
+  background: #fc693e;
+  color: white;
+  text-align: center;
+  padding: 1.618em; }
+  @media screen and (min-width: 47.5em) {
+    .fin {
+      padding: 3.236em 1.618em; } }
+  .fin p {
+    color: white; }
+  .fin img {
+    max-width: 100%;
+    margin-bottom: 2em;
+    vertical-align: bottom; }
 
 #intro {
   background: #74496d url("/assets/images/photo.jpg") right top no-repeat;
@@ -2731,8 +2746,11 @@ button {
     @media screen and (min-width: 40em) {
       #intro p {
         font-size: 1.5em; } }
-  #intro a:hover {
-    border-bottom: solid 2px #fc693e; }
+  #intro a {
+    color: #fc693e; }
+    #intro a:hover {
+      border-bottom: solid 2px #fc693e;
+      color: white; }
   #intro .social-links {
     max-width: 800px;
     margin: 3em auto 0 auto;
@@ -2814,18 +2832,37 @@ button {
       height: 100%;
       background: white;
       text-align: center;
-      line-height: 4;
-      overflow: hidden; }
+      line-height: 4; }
       @media screen and (min-width: 47.5em) {
         .main-nav .main-nav__links li a {
           line-height: 5;
           opacity: .8; }
           .main-nav .main-nav__links li a:hover {
             opacity: 1;
-            background: #ebebeb; } }
+            background: #ebebeb;
+            width: 110%;
+            border-left: solid 5px #fc5d2f; } }
+
+#recent-articles {
+  max-width: 73.75em;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  padding: 1.618em;
+  text-align: center; }
+  #recent-articles:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (min-width: 56.25em) {
+    #recent-articles {
+      padding: 3.236em 1.618em; } }
+  #recent-articles h2 {
+    font-weight: normal;
+    margin-bottom: 1em; }
 
 #recent-work {
-  padding: 3.236em 0; }
+  padding: 3.236em 0 0 0; }
 
 h1 {
   margin-bottom: 1.618em; }

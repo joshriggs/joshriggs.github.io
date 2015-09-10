@@ -91,8 +91,13 @@
     }
   }
 
-  a:hover {
-    border-bottom: solid 2px $orange;
+  a {
+    color: $orange;
+
+    &:hover {
+      border-bottom: solid 2px $orange;
+      color: white;
+    }
   }
 
   .social-links {

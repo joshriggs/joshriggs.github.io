@@ -1,0 +1,20 @@
+.fin{
+  background: $orange;
+  color: white;
+  text-align: center;
+  padding: $gutter;
+
+  @include media($medium-large-screen) {
+    padding: $gutter * 2 $gutter;
+  }
+
+  p {
+    color: white;
+  }
+
+  img {
+    max-width: 100%;
+    margin-bottom: 2em;
+    vertical-align: bottom;
+  }
+}

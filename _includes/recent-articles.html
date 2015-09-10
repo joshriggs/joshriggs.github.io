@@ -1,0 +1,10 @@
+<section id="recent-articles">
+  <h1>Recent Articles</h1>
+  <ul class="recent-articles__list">
+  {% for link in site.data.writing %}
+    <li>
+      <h2><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></h2>  
+    </li>
+  {% endfor %}  
+  </ul>
+</section>

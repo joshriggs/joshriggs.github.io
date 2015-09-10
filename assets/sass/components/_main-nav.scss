@@ -71,7 +71,6 @@
       background: white;
       text-align: center;
       line-height: 4;
-      overflow: hidden;
 
       @include media($medium-large-screen) {
         line-height: 5;
@@ -80,6 +79,8 @@
         &:hover {
           opacity: 1;
           background: $light-gray;
+          width: 110%;
+          border-left: solid 5px darken($orange, 3%);
         }
       }
     }
