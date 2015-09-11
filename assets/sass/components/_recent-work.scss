@@ -72,14 +72,14 @@ h3 {
       padding: 0;
       top: 40%;
       width: 100%;
-      transform: translateY(300px);
+      @include transform(translateY(300px));
     }
   }
 
   &:hover {
     .portfolio-item-text {
       @include media($large-screen) {
-        transform: translateY(0px);
+        @include transform(translateY(0px));
         transition: all .3s;
       }
     }
@@ -87,7 +87,7 @@ h3 {
     img {
       @include media($large-screen) {
         opacity: .16;  
-        transform: scale(1.125,1.125); 
+        @include transform(scale(1.125,1.125)); 
         transition: all .5s;     
       }
     }

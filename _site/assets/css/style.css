@@ -2928,14 +2928,26 @@ h3 {
         padding: 0;
         top: 40%;
         width: 100%;
+        -webkit-transform: translateY(300px);
+        -moz-transform: translateY(300px);
+        -ms-transform: translateY(300px);
+        -o-transform: translateY(300px);
         transform: translateY(300px); } }
   @media screen and (min-width: 56.25em) {
     .portfolio-links__item:hover .portfolio-item-text {
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      -o-transform: translateY(0px);
       transform: translateY(0px);
       transition: all .3s; } }
   @media screen and (min-width: 56.25em) {
     .portfolio-links__item:hover img {
       opacity: .16;
+      -webkit-transform: scale(1.125, 1.125);
+      -moz-transform: scale(1.125, 1.125);
+      -ms-transform: scale(1.125, 1.125);
+      -o-transform: scale(1.125, 1.125);
       transform: scale(1.125, 1.125);
       transition: all .5s; } }
 
