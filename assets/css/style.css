@@ -2641,7 +2641,7 @@ cite {
   cite:before {
     content: '\2014 \00A0'; }
 
-button {
+button, .button {
   display: inline-block;
   background: transparent;
   border: solid 2px #74496d;
@@ -2650,15 +2650,15 @@ button {
   text-align: center;
   font-weight: 800;
   transition: all .3s; }
-  button:hover {
+  button:hover, .button:hover {
     background: #74496d;
     color: white;
     transition: all .3s; }
 
-.portfolio-links__item button {
+.more-work .button, .portfolio-links__item button {
   color: white;
   border-color: white; }
-  .portfolio-links__item button:hover {
+  .more-work .button:hover, .portfolio-links__item button:hover {
     background: white;
     color: #74496d; }
 
@@ -2843,6 +2843,15 @@ button {
             width: 110%;
             border-left: solid 5px #fc5d2f; } }
 
+.more-work {
+  padding: 4.854em 1.618em;
+  background: #392836;
+  clear: both;
+  text-align: center; }
+  .more-work h1 {
+    color: #fc693e;
+    margin-bottom: 1em; }
+
 #recent-articles {
   max-width: 73.75em;
   margin-left: auto;
@@ -2870,11 +2879,11 @@ h1 {
 h2 {
   font-weight: 800;
   margin-bottom: .25em;
-  font-size: 1.25em;
-  color: white; }
+  font-size: 1.25em; }
   @media screen and (min-width: 56.25em) {
     h2 {
-      font-size: 1.5em; } }
+      font-size: 1.5em;
+      color: white; } }
 
 h3 {
   font-size: 1em;
@@ -2886,8 +2895,7 @@ h3 {
 
 .portfolio-links__item {
   position: relative;
-  width: 100%;
-  background: black; }
+  width: 100%; }
   @media screen and (min-width: 40em) {
     .portfolio-links__item {
       float: left;
@@ -2900,8 +2908,7 @@ h3 {
     width: 100%;
     height: auto;
     vertical-align: bottom;
-    transition: all .2s;
-    opacity: .5; }
+    transition: all .2s; }
     @media screen and (min-width: 56.25em) {
       .portfolio-links__item img {
         opacity: 1;
@@ -2912,20 +2919,25 @@ h3 {
       .portfolio-links__item button {
         display: inline-block; } }
   .portfolio-links__item .portfolio-item-text {
-    position: absolute;
-    top: 40%;
-    width: 100%;
     text-align: center;
-    transition: all .3s; }
+    transition: all .3s;
+    padding: 1.618em 0; }
     @media screen and (min-width: 56.25em) {
       .portfolio-links__item .portfolio-item-text {
+        position: absolute;
+        padding: 0;
+        top: 40%;
+        width: 100%;
         transform: translateY(300px); } }
   @media screen and (min-width: 56.25em) {
     .portfolio-links__item:hover .portfolio-item-text {
       transform: translateY(0px);
       transition: all .3s; } }
-  .portfolio-links__item:hover img {
-    opacity: .2; }
+  @media screen and (min-width: 56.25em) {
+    .portfolio-links__item:hover img {
+      opacity: .16;
+      transform: scale(1.125, 1.125);
+      transition: all .5s; } }
 
 /* No files to import found in vendor/* */
 

@@ -10,10 +10,10 @@ h2 {
   font-weight: 800;
   margin-bottom: .25em;
   font-size: 1.25em;
-  color: white;
 
   @include media($large-screen) {
     font-size: 1.5em;
+    color: white;
   }
 }
 
@@ -30,7 +30,6 @@ h3 {
 .portfolio-links__item {
   position: relative;
   width: 100%;
-  background: black;
  
   @include media($medium-screen) {
     float: left;
@@ -47,7 +46,6 @@ h3 {
     height: auto;
     vertical-align: bottom;
     transition: all .2s;
-    opacity: .5;
 
     @include media($large-screen) {
       opacity: 1;
@@ -65,13 +63,15 @@ h3 {
   }
 
   .portfolio-item-text {
-    position: absolute;
-    top: 40%;
-    width: 100%;
     text-align: center;
     transition: all .3s;
+    padding: $gutter 0;
 
     @include media($large-screen) {
+      position: absolute;
+      padding: 0;
+      top: 40%;
+      width: 100%;
       transform: translateY(300px);
     }
   }
@@ -85,7 +85,11 @@ h3 {
     }
 
     img {
-      opacity: .2;
+      @include media($large-screen) {
+        opacity: .16;  
+        transform: scale(1.125,1.125); 
+        transition: all .5s;     
+      }
     }
   }
 }
