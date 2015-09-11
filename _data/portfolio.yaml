@@ -1,32 +1,38 @@
 - title: "Southern Poverty Law Center"
   subtitle: "SPLCenter.org Responsive Redesign"
   url: http://www.google.com
-  image: thumb-splc.jpg
+  button: "View on Behance"
+  image: lead-image-splc.jpg
 
 - title: "Southern Poverty Law Center"
   subtitle: "Selma: Bridge to the Ballot"
-  url: http://www.google.com
-  image: thumb-selma.jpg
+  url: http://www.selma.splcenter.org
+  button: "Check Out the Site"
+  image: lead-image-selma.jpg
 
 - title: "NAMM Foundation"
   subtitle: "Responsive Website Redesign"
-  url: http://www.google.com
-  image: thumb-namm.jpg
+  url: https://www.behance.net/gallery/16675811/NAMM-Foundation-responsive-redesign
+  button: "View on Behance"
+  image: lead-image-namm.jpg
 
 - title: "Colorado Trust"
   subtitle: "Responsive Web Redesign"
   url: http://www.google.com
-  image: thumb-cotrust.jpg
+  button: "View on Behance"
+  image: lead-image-cotrust.jpg
 
 - title: "The Grammys"
   subtitle: "Grammy.com Responsive Redesign"
-  url: http://www.google.com
-  image: thumb-grammy.jpg
+  url: https://www.behance.net/gallery/16657653/Grammycom-Redesign-2013
+  button: "View on Behance"
+  image: lead-image-grammy.jpg
 
 - title: "Sony Pictures TV"
   subtitle: "International Website Redesign"
   url: http://www.google.com
-  image: thumb-sony.jpg
+  button: "View on Behance"
+  image: lead-image-sony.jpg
 
 
 
