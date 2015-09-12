@@ -2562,10 +2562,10 @@ body {
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato";
+  font-family: "clarendon-urw";
   line-height: 1.25em;
   margin: 0;
-  font-weight: 600;
+  font-weight: 400;
   text-rendering: optimizeLegibility; }
 
 h1 {
@@ -2720,7 +2720,7 @@ button, .button {
     margin-bottom: .5em;
     text-align: center;
     text-transform: initial;
-    font-weight: 800; }
+    font-weight: 300; }
     @media screen and (min-width: 40em) {
       #intro h1 {
         font-size: 4.5em; } }
@@ -2868,7 +2868,8 @@ button, .button {
       padding: 3.236em 1.618em; } }
   #recent-articles h2 {
     font-weight: normal;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    font-family: "lato"; }
 
 #recent-work {
   padding: 3.236em 0 0 0; }
