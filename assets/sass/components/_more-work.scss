@@ -1,0 +1,15 @@
+.more-work {
+  padding: $gutter * 3 $gutter;
+  background: $dark-purple;
+  clear: both;
+  text-align: center;
+
+  h1 {
+    color: $orange;
+    margin-bottom: 1em;
+  }
+
+  .button {
+    @extend %button-white;
+  }
+}

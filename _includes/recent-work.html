@@ -1,0 +1,17 @@
+<section id="recent-work" class="content-section">
+  <h1>Recent &amp; Favorite Work</h1>
+  <ul class="portfolio-links">
+    {% for link in site.data.portfolio %}
+    <li class="portfolio-links__item">
+      <a href="{{ link.url }}" target="_blank">
+        <img src="{{site.baseurl}}/assets/images/{{ link.image }}">
+        <div class="portfolio-item-text">
+          <h2 class="portfolio-item-title">{{ link.title }}</h2>
+          <h3 class="portfolio-item-description">{{ link.subtitle }}</h3>
+          <button>View on Behance</button>  
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

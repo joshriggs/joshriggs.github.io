@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="">
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="/assets/js/jquery.waypoints.js"></script>
-    <script src="/assets/js/sticky.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
     <script src="/assets/js/modernizr.js"></script>
-    <script src="//use.typekit.net/zol0dqq.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
+    <script src="/assets/js/main.js"></script>
+    <script src="https://use.typekit.net/zol0dqq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <link rel="canonical" href="/">
 
     <!-- Custom CSS -->
@@ -21,25 +22,132 @@
 </head>
 
 
-    <body class="layout-default">
-
+    <body class="layout-default"> 
+    <nav class="main-nav">
+  <div class="logo">
+    <img src="/assets/images/logo.svg">
+  </div>
+  <ul class="main-nav__links">
+    <li><a href="#intro"><img src="/assets/images/beard.svg"></a></li>
+    <li><a href="#recent-work"><img src="/assets/images/work.svg"></a></li>
+    <li><a href="#recent-articles"><img src="/assets/images/articles.svg"></a></li>
+    <li><a href="mailto:josh.riggs@gmail.com"><img src="/assets/images/plane.svg"></a></li>
+  </ul>      
+</nav> 
     <div class="page-content">
-      <div class="temp-intro">
-  <h1>Josh Riggs</h1>
-  <h2>UX / Design / Front End</h2>
-  <p>Howdy. I'm a UX &amp; visual designer at <a href="http://www.thinkshout.com">ThinkShout</a>, formerly at <a href="http://www.lullabot.com">Lullabot</a>. I specialize in responsive design for large&ndash;scale websites, and I like to <a href="https://speakerdeck.com/joshriggs/">give talks</a> on the subject. I'm also a <a href="http://www.flickr.com/joshriggs">Photographer</a>, an adventurer, and a pretty darn good cook. I'm married to this <a href="https://twitter.com/AngelaRiggs_">lovely lady</a> and currently hang my hat in Portland, Ore. Stay tuned...</p>
+      <section id="intro" class="content-section">
+  <div class="site-title animated fadeInLeft">
+    <span class="name">Josh Riggs</span> UX / Design / Front End 
+  </div>
+  <div class="intro-text">
+    <h1>Howdy.</h1>
+    <p>I'm <strong>Josh Riggs</strong>, a UX &amp; visual designer at <a href="http://www.thinkshout.com">ThinkShout</a>, formerly at <a href="http://www.lullabot.com">Lullabot</a>. I specialize in responsive design for large&ndash;scale websites, and I like to <a href="https://speakerdeck.com/joshriggs/">give talks</a> on the subject. I'm also a <a href="http://www.flickr.com/joshriggs">Photographer</a>, an adventurer, and a pretty darn good cook. I'm married to this <a href="https://twitter.com/AngelaRiggs_">lovely lady</a> and currently hang my hat in Portland, Ore. Stay tuned...</p>
 
-  <ul class="social-links">
-    <li><a href="http://www.behance.net/joshriggs" target="_blank"><img src="/assets/images/icon-behance.png"></a></li>
-    <li><a href="http://flickr.com/joshriggs" target="_blank"><img src="/assets/images/icon-flickr.png"></a></li>
-    <!-- <li><a href="http://www.dribbble.com/joshriggs" target="_blank"><img src="/assets/images/icon-dribbble.png"></a></li> -->
-    <li><a href="http://www.linkedin.com/in/joshriggs" target="_blank"><img src="/assets/images/icon-linkedin.png"></a></li>
-    <li><a href="http://www.twitter.com/joshriggs" target="_blank"><img src="/assets/images/icon-twitter.png"></a></li>
-    <li><a href="mailto:josh.riggs@gmail.com" target="_blank"><img src="/assets/images/icon-email.png"></a></li>
+    <ul class="social-links">
+      <li><a href="http://www.behance.net/joshriggs" target="_blank"><img src="/assets/images/icon-behance.png"></a></li>
+      <li><a href="http://flickr.com/joshriggs" target="_blank"><img src="/assets/images/icon-flickr.png"></a></li>
+      <!-- <li><a href="http://www.dribbble.com/joshriggs" target="_blank"><img src="/assets/images/icon-dribbble.png"></a></li> -->
+      <li><a href="http://www.linkedin.com/in/joshriggs" target="_blank"><img src="/assets/images/icon-linkedin.png"></a></li>
+      <li><a href="http://www.twitter.com/joshriggs" target="_blank"><img src="/assets/images/icon-twitter.png"></a></li>
+      <li><a href="mailto:josh.riggs@gmail.com" target="_blank"><img src="/assets/images/icon-email.png"></a></li>
+    </ul>
+  </div>
+</section>
+<section id="recent-work" class="content-section">
+  <h1>Recent &amp; Favorite Work</h1>
+  <ul class="portfolio-links">
+    
+    <li class="portfolio-links__item">
+      <a href="https://www.behance.net/gallery/29490045/Southern-Poverty-Law-Center-Responsive-Redesign" target="_blank">
+        <img src="/assets/images/lead-image-splc.jpg">
+        <div class="portfolio-item-text">
+          <h2 class="portfolio-item-title">Southern Poverty Law Center</h2>
+          <h3 class="portfolio-item-description">SPLCenter.org Responsive Redesign</h3>
+          <button>View on Behance</button>  
+        </div>
+      </a>
+    </li>
+    
+    <li class="portfolio-links__item">
+      <a href="https://www.behance.net/gallery/29489611/Selma-The-Bridge-to-the-Ballot" target="_blank">
+        <img src="/assets/images/lead-image-selma.jpg">
+        <div class="portfolio-item-text">
+          <h2 class="portfolio-item-title">Southern Poverty Law Center</h2>
+          <h3 class="portfolio-item-description">Selma: Bridge to the Ballot</h3>
+          <button>View on Behance</button>  
+        </div>
+      </a>
+    </li>
+    
+    <li class="portfolio-links__item">
+      <a href="https://www.behance.net/gallery/16675811/NAMM-Foundation-responsive-redesign" target="_blank">
+        <img src="/assets/images/lead-image-namm.jpg">
+        <div class="portfolio-item-text">
+          <h2 class="portfolio-item-title">NAMM Foundation</h2>
+          <h3 class="portfolio-item-description">Responsive Website Redesign</h3>
+          <button>View on Behance</button>  
+        </div>
+      </a>
+    </li>
+    
+    <li class="portfolio-links__item">
+      <a href="https://www.behance.net/gallery/29490317/Colorado-Trust-Responsive-Redesign" target="_blank">
+        <img src="/assets/images/lead-image-cotrust.jpg">
+        <div class="portfolio-item-text">
+          <h2 class="portfolio-item-title">Colorado Trust</h2>
+          <h3 class="portfolio-item-description">Responsive Web Redesign</h3>
+          <button>View on Behance</button>  
+        </div>
+      </a>
+    </li>
+    
+    <li class="portfolio-links__item">
+      <a href="https://www.behance.net/gallery/16657653/Grammycom-Redesign-2013" target="_blank">
+        <img src="/assets/images/lead-image-grammy.jpg">
+        <div class="portfolio-item-text">
+          <h2 class="portfolio-item-title">The Grammys</h2>
+          <h3 class="portfolio-item-description">Grammy.com Responsive Redesign</h3>
+          <button>View on Behance</button>  
+        </div>
+      </a>
+    </li>
+    
+    <li class="portfolio-links__item">
+      <a href="https://www.behance.net/gallery/29491069/Sony-Pictures-TV-International-Network-Site-UX-UI" target="_blank">
+        <img src="/assets/images/lead-image-sony.jpg">
+        <div class="portfolio-item-text">
+          <h2 class="portfolio-item-title">Sony Pictures TV</h2>
+          <h3 class="portfolio-item-description">International Website Redesign</h3>
+          <button>View on Behance</button>  
+        </div>
+      </a>
+    </li>
+    
   </ul>
+</section>
+
+<section class="more-work">
+  <h1>Wanna See More Work?</h1>
+  <a class="button" href="https://www.behance.net/joshriggs">Check Out My Behance Profile!</a>
+</section>
+<section id="recent-articles">
+  <h1>Recent Articles</h1>
+  <ul class="recent-articles__list">
+  
+    <li>
+      <h2><a href="http://blog.invisionapp.com/small-design-budget/" target="_blank">How to Deal with a Small Design Budget</a></h2>  
+    </li>
+  
+    <li>
+      <h2><a href="http://mathys-potestio.com/instead-of-becoming-a-programmer-learn-to-think-like-one/" target="_blank">Instead of Becoming a Programmer, Learn to Think Like One</a></h2>  
+    </li>
+    
+  </ul>
+</section>
+<div class="fin">
+  <img src="/assets/images/fin.svg">
+  <p>Hand built with Jekyll, Sass &amp; Bourbon</p>
 </div>
-
-
     </div>
 
     </body>

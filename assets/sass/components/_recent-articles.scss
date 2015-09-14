@@ -1,0 +1,16 @@
+#recent-articles {
+  @include outer-container;
+  clear: both;
+  padding: $gutter;
+  text-align: center;
+
+  @include media($large-screen) {
+    padding: $gutter * 2 $gutter;
+  }
+
+  h2 {
+    font-weight: normal;
+    margin-bottom: 1em;
+    font-family: "lato";
+  }
+}

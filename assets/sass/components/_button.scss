@@ -1,0 +1,26 @@
+button, .button {
+  display: inline-block;
+  background: transparent;
+  border: solid 2px $purple;
+  padding: .5em 1em;
+  color: $purple;
+  text-align: center;
+  font-weight: 800;
+  transition: all .3s;
+
+  &:hover {
+    background: $purple;
+    color: white;
+    transition: all .3s;
+  }
+}
+
+%button-white {
+  color: white;
+  border-color: white;
+
+  &:hover {
+    background: white;
+    color: $purple;
+  }
+}

@@ -1,9 +1,11 @@
 
 body {
-    background: #74496d url('/assets/images/photo.jpg') right top no-repeat;
-    background-size: cover; 
-    background-attachment: fixed;
     margin: 0;
-    padding: 0;
+    background-color: #ebebeb;
+    padding: 60px 0 0 0;
+
+    @include media($medium-large-screen) {
+      padding: 0 0 0 70px;
+    }
 }
 

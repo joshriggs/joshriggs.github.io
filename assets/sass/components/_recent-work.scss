@@ -1,0 +1,95 @@
+#recent-work {
+  padding: $gutter * 2 0 0 0;
+}
+
+h1 {
+  margin-bottom: $gutter;
+}
+
+h2 {
+  font-weight: 800;
+  margin-bottom: .25em;
+  font-size: 1.25em;
+
+  @include media($large-screen) {
+    font-size: 1.5em;
+    color: white;
+  }
+}
+
+h3 {
+  font-size: 1em;
+  margin-bottom: .75em;
+  color: $orange;
+
+  @include media($large-screen) {
+    color: white;
+  }
+}
+
+.portfolio-links__item {
+  position: relative;
+  width: 100%;
+ 
+  @include media($medium-screen) {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+  }
+
+  @include media($large-screen) {
+    background: $orange;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    transition: all .2s;
+
+    @include media($large-screen) {
+      opacity: 1;
+      transition: all .2s;
+    }
+  }
+
+  button {
+    @extend %button-white;
+    display: none;
+
+    @include media($large-screen) {
+      display: inline-block;
+    }
+  }
+
+  .portfolio-item-text {
+    text-align: center;
+    transition: all .3s;
+    padding: $gutter 0;
+
+    @include media($large-screen) {
+      position: absolute;
+      padding: 0;
+      top: 40%;
+      width: 100%;
+      @include transform(translateY(300px));
+    }
+  }
+
+  &:hover {
+    .portfolio-item-text {
+      @include media($large-screen) {
+        @include transform(translateY(0px));
+        transition: all .3s;
+      }
+    }
+
+    img {
+      @include media($large-screen) {
+        opacity: .16;  
+        @include transform(scale(1.125,1.125)); 
+        transition: all .5s;     
+      }
+    }
+  }
+}
