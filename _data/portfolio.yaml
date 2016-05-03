@@ -1,8 +1,8 @@
-- title: "Cozy"
-  subtitle: "Marketing Site Redesign"
-  url: https://www.behance.net/gallery/36729751/Cozy-Marketing-Site
+- title: "Southern Poverty Law Center"
+  subtitle: "SPLCenter.org Responsive Redesign"
+  url: https://www.behance.net/gallery/29490045/Southern-Poverty-Law-Center-Responsive-Redesign
   button: "View on Behance"
-  image: lead-image-cozy.jpg
+  image: lead-image-splc.jpg
 
 - title: "Facing History & Ourselves"
   subtitle: "Website & Resource Library"
@@ -10,11 +10,11 @@
   button: "View on Behance"
   image: lead-image-fh.jpg
 
-- title: "Southern Poverty Law Center"
-  subtitle: "SPLCenter.org Responsive Redesign"
-  url: https://www.behance.net/gallery/29490045/Southern-Poverty-Law-Center-Responsive-Redesign
+- title: "Cozy"
+  subtitle: "Marketing Site Redesign"
+  url: https://www.behance.net/gallery/36729751/Cozy-Marketing-Site
   button: "View on Behance"
-  image: lead-image-splc.jpg
+  image: lead-image-cozy.jpg  
 
 - title: "Southern Poverty Law Center"
   subtitle: "Selma: Bridge to the Ballot"
