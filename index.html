@@ -6,7 +6,7 @@
   <title>Josh Riggs — Product Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -17,206 +17,124 @@
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <!-- ── Hero ── -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-inner">
-        <div class="hero-eyebrow">
-          <span class="hero-dot"></span>
-          Available for new projects
-        </div>
-        <h1 class="hero-message">
-          Hello, friends.<br>
-          I'm Josh, a product<br>
-          designer and actual human.
-        </h1>
-        <p class="hero-scroll text-muted">Scroll to see recent work ↓</p>
-      </div>
-    </div>
-  </section>
+  <header class="hero">
+    <div class="hero-bg"><img src="images/hero.png" alt=""></div>
+    <h1 class="hero-message">
+      Hello, friends.<br>
+      I'm <span class="accent-purple">Josh</span>, a product<br>
+      designer and an <span class="accent-purple">actual human</span><span class="accent-pink">*</span>.
+    </h1>
+  </header>
 
-  <!-- ── Recent Projects ── -->
+  <!-- ── Recent Work ── -->
   <section id="work">
-    <div class="container">
-      <div class="section-label">
-        <h4>Recent Work</h4>
-      </div>
+    <div class="section-head section-head--ruled">
+      <span class="section-label">Recent Work</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
     </div>
 
-    <div class="container">
-      <div class="projects-grid">
+    <div class="work-list">
+      <a class="work-row" href="projects/project-1.html">
+        <div class="work-row-head">
+          <span class="work-company">ngrok</span>
+          <h2 class="work-title">Usage &amp; Limits</h2>
+        </div>
+        <div class="work-row-desc"><p>Isn't it neat to see how much you're being billed for?</p></div>
+      </a>
 
-        <!-- Project 1 -->
-        <a href="projects/project-1.html" class="project-card">
-          <div class="project-image">
-            <!-- Replace src with your image path -->
-            <div class="project-image-placeholder">Project Image</div>
-            <!-- <img src="images/project-1-cover.jpg" alt="Project 1"> -->
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-number">01</span>
-              <h3 class="project-title">Project Title Goes Here</h3>
-              <p class="project-desc">
-                A few sentences describing the project, the problem it solved, and what made it interesting to work on. Keep it punchy and human.
-              </p>
-            </div>
-            <div class="project-footer">
-              <span class="project-tag">Product Design</span>
-              <span class="project-arrow">↗</span>
-            </div>
-          </div>
-        </a>
+      <a class="work-row" href="projects/project-2.html">
+        <div class="work-row-head">
+          <span class="work-company">Datadog</span>
+          <h2 class="work-title">Change Tracking</h2>
+        </div>
+        <div class="work-row-desc"><p>Isn't it neat to see how much you're being billed for?</p></div>
+      </a>
 
-        <!-- Project 2 -->
-        <a href="projects/project-2.html" class="project-card">
-          <div class="project-image">
-            <div class="project-image-placeholder">Project Image</div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-number">02</span>
-              <h3 class="project-title">Second Project Title</h3>
-              <p class="project-desc">
-                Another short description that captures the essence of this project. What did you design? What was the challenge? What was your contribution?
-              </p>
-            </div>
-            <div class="project-footer">
-              <span class="project-tag">UX Research</span>
-              <span class="project-arrow">↗</span>
-            </div>
-          </div>
-        </a>
+      <a class="work-row" href="projects/project-3.html">
+        <div class="work-row-head">
+          <span class="work-company">ngrok</span>
+          <h2 class="work-title">Agent Vision</h2>
+        </div>
+        <div class="work-row-desc"><p>Isn't it neat to see how much you're being billed for?</p></div>
+      </a>
 
-        <!-- Project 3 -->
-        <a href="projects/project-3.html" class="project-card">
-          <div class="project-image">
-            <div class="project-image-placeholder">Project Image</div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-number">03</span>
-              <h3 class="project-title">Third Project Title</h3>
-              <p class="project-desc">
-                Your third project description. What made this one unique? What were the constraints or opportunities that shaped your approach?
-              </p>
-            </div>
-            <div class="project-footer">
-              <span class="project-tag">Design Systems</span>
-              <span class="project-arrow">↗</span>
-            </div>
-          </div>
-        </a>
+      <a class="work-row" href="projects/project-4.html">
+        <div class="work-row-head">
+          <span class="work-company">Datadog</span>
+          <h2 class="work-title">Service Config</h2>
+        </div>
+        <div class="work-row-desc"><p>Isn't it neat to see how much you're being billed for?</p></div>
+      </a>
 
-      </div>
+      <a class="work-row" href="projects/project-5.html">
+        <div class="work-row-head">
+          <span class="work-company">ngrok</span>
+          <h2 class="work-title">Certificates</h2>
+        </div>
+        <div class="work-row-desc"><p>Isn't it neat to see how much you're being billed for?</p></div>
+      </a>
+
+      <a class="work-row" href="projects/project-6.html">
+        <div class="work-row-head">
+          <span class="work-company">Datadog</span>
+          <h2 class="work-title">Databases</h2>
+        </div>
+        <div class="work-row-desc"><p>Isn't it neat to see how much you're being billed for?</p></div>
+      </a>
     </div>
   </section>
 
   <!-- ── About ── -->
-  <section id="about" style="border-top: 1px solid var(--border);">
-    <div class="container">
-      <div class="section-label">
-        <h4>About</h4>
-      </div>
-      <div class="about-grid">
+  <section id="about">
+    <div class="about">
+      <div class="about-inner">
+        <div class="about-photo">
+          <img src="images/me.png" alt="Josh Riggs, with a hand-drawn “That's me.” label">
+        </div>
+
         <div class="about-text">
-          <h2>Designing products<br>people actually want<br>to use.</h2>
-          <p>
-            I'm a product designer with a decade of experience shipping digital products across consumer apps, developer tools, and enterprise software. I care deeply about the space between intention and experience — the gap between what a product is supposed to do and what it actually feels like to use.
-          </p>
-          <p>
-            My process is collaborative, iterative, and grounded in real user behavior. I work closely with engineers, PMs, and stakeholders to move from ambiguous problems to clear, considered solutions. I'm as comfortable running a research session as I am pushing pixels.
-          </p>
-          <p>
-            When I'm not designing I'm probably hiking, reading about typefaces, or arguing about coffee.
-          </p>
-        </div>
-        <div class="about-image-wrap">
-          <div class="about-image">
-            <!-- Replace src with your photo -->
-            <div class="about-image-placeholder">Your Photo Here</div>
-            <!-- <img src="images/josh.jpg" alt="Josh Riggs"> -->
+          <div class="about-heading">
+            <p class="about-eyebrow">About me</p>
+            <h2 class="about-title">My product design experience is old enough to legally buy beer.</h2>
+          </div>
+
+          <div class="about-body">
+            <p>
+              I've had fun designing everything from <strong>observability</strong> &amp; <strong>data analytics apps</strong> to <strong>hospital websites</strong> to <strong>maps that track extremist hate groups</strong>. I'm scrappy. I prioritize shipping and iterating. <strong>I love building things with my team</strong>. I learn really fast, and I'm not afraid to <strong>jump in and push code</strong>.
+            </p>
+            <p>
+              Currently, I sling pixels and pull requests for <a href="https://ngrok.com" target="_blank" rel="noopener">ngrok</a>. Before that, I was at <a href="https://www.datadoghq.com" target="_blank" rel="noopener">Datadog</a> and <a href="https://newrelic.com" target="_blank" rel="noopener">New Relic</a>.
+            </p>
+            <p>
+              I also make <strong>music</strong>, <strong>hike</strong>, <strong>play with my dog</strong>, and generally <strong>love</strong> all that life in <strong>the Pacific Northwest</strong> has to offer... Except IPAs. <strong>IPAs are terrible</strong>.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Experience ── -->
-  <section id="experience" class="experience">
-    <div class="container">
-      <div class="section-label">
-        <h4>Recent Work Experience</h4>
+  <!-- ── Contact ── -->
+  <section id="contact">
+    <footer class="contact">
+      <a class="contact-link" href="mailto:josh.riggs@gmail.com">Email me.</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/joshriggs/" target="_blank" rel="noopener">LinkedIn me.</a>
+      <div class="contact-kidding">
+        <span class="contact-link contact-link--struck">Follow me on Instagram.</span>
+        <span class="contact-jk">just kidding.</span>
       </div>
-      <div class="experience-list">
-
-        <!-- Job 1 -->
-        <div class="experience-item">
-          <div class="experience-left">
-            <span class="experience-company">Company Name</span>
-            <span class="experience-role">Senior Product Designer</span>
-            <span class="experience-date">2022 — Present</span>
-          </div>
-          <div class="experience-right">
-            <p>
-              A short description of your role, what team you were on, and the kind of work you did. Focus on impact and scope rather than a dry job description. What did you actually do there?
-            </p>
-          </div>
-        </div>
-
-        <!-- Job 2 -->
-        <div class="experience-item">
-          <div class="experience-left">
-            <span class="experience-company">Previous Company</span>
-            <span class="experience-role">Product Designer</span>
-            <span class="experience-date">2019 — 2022</span>
-          </div>
-          <div class="experience-right">
-            <p>
-              A short description of your previous role. What were you responsible for? What products or features did you ship? How did the team grow or change while you were there?
-            </p>
-          </div>
-        </div>
-
-        <!-- Job 3 -->
-        <div class="experience-item">
-          <div class="experience-left">
-            <span class="experience-company">Earlier Company</span>
-            <span class="experience-role">UX Designer</span>
-            <span class="experience-date">2016 — 2019</span>
-          </div>
-          <div class="experience-right">
-            <p>
-              Your earlier role. This is a good place to show the arc of your career — how you started, what you learned, and how it shaped the designer you are today.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
+      <p class="contact-made">Made in Portland, OR, by me</p>
+    </footer>
   </section>
-
-  <!-- ── Footer ── -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-left">
-          <span class="footer-name">Josh Riggs</span>
-          <span class="footer-tagline">Product Designer</span>
-        </div>
-        <ul class="footer-links">
-          <li><a href="mailto:hello@example.com">Email</a></li>
-          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-          <li><a href="https://dribbble.com" target="_blank">Dribbble</a></li>
-          <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
 
   <script>
     const nav = document.getElementById('nav');
