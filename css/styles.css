@@ -156,7 +156,7 @@ nav.scrolled {
   display: flex;
   align-items: center;
   gap: 30px;
-  padding: 50px var(--gutter) 25px;
+  padding: 40px var(--gutter) 40px;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
 }
@@ -184,7 +184,7 @@ nav.scrolled {
 .arrows .arrow {
   width: 20px;
   height: 20px;
-  fill: var(--strong);
+  fill: var(--purple);
   transform: rotate(90deg);
 }
 
