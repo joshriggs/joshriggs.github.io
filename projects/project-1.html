@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Title — Josh Riggs</title>
+  <title>Usage &amp; Limits — Josh Riggs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
   <script src="../js/gate.js"></script>
 </head>
@@ -16,174 +16,116 @@
   <nav id="nav">
     <a href="../index.html" class="nav-logo">Josh Riggs</a>
     <ul class="nav-links">
-      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#work" class="is-active">Work</a></li>
       <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- ── Hero Image ── -->
-  <div class="project-hero">
-    <div class="project-hero-image">
-      <!-- Replace with your hero image -->
-      <div class="project-hero-image-placeholder">Hero Image — 16:7</div>
-      <!-- <img src="../images/project-1-hero.jpg" alt="Project hero"> -->
-    </div>
-  </div>
+  <!-- ── Header + Hero imagery ── -->
+  <section class="pd-top">
+    <header class="pd-header">
+      <div class="pd-header-inner pd-col">
+        <h1 class="pd-title">Usage &amp; Limits</h1>
+        <p class="pd-subtitle">
+          Isn't it neat to see how much you're being billed for? A clear, one or two sentence subtitle that captures the essence of the project — what it is, who it's for, and why it matters.
+        </p>
 
-  <!-- ── Project Header ── -->
-  <div class="project-header">
-    <div class="container">
-      <div class="project-header-inner">
-
-        <div class="project-header-left">
-          <a href="../index.html#work" class="project-back">← Back to work</a>
-          <h1 class="project-detail-title">Project Title Goes Here</h1>
-          <p class="project-subtitle">
-            A clear, one or two sentence subtitle that captures the essence of the project — what it is, who it's for, and why it matters.
-          </p>
-        </div>
-
-        <!-- ── Info Cards ── -->
-        <div class="info-cards">
-          <div class="info-card">
-            <h4>Company</h4>
-            <span class="info-card-value">Company Name</span>
+        <div class="pd-meta">
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">Company</span>
+            <span class="pd-meta-value">ngrok</span>
           </div>
-          <div class="info-card">
-            <h4>Design Tools</h4>
-            <span class="info-card-value">Figma, Maze, Loom</span>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">My role</span>
+            <span class="pd-meta-value">Design lead</span>
           </div>
-          <div class="info-card">
-            <h4>My Role</h4>
-            <span class="info-card-value">Lead Product Designer</span>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">Design tools</span>
+            <span class="pd-meta-value">Figma, Figjam, Whimsical</span>
           </div>
-          <div class="info-card">
-            <h4>My Impact</h4>
-            <span class="info-card-value">Reduced onboarding drop-off by 34%</span>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">My impact</span>
+            <span class="pd-meta-value">ngrok</span>
           </div>
         </div>
-
       </div>
+    </header>
+
+    <!-- Hero image -->
+    <div class="pd-shots pd-col">
+      <img src="../images/project-1-hero.png" alt="Usage Breakdown and Limits screens">
     </div>
-  </div>
+  </section>
 
-  <!-- ── Project Body ── -->
-  <div class="project-body">
-    <div class="container">
-      <div class="project-body-inner">
+  <!-- ── Main Content ── -->
+  <main class="pd-main">
 
-        <!-- Section: Overview -->
-        <div class="body-text">
-          <h3>Overview</h3>
-          <p>
-            Start with context. What was the product? What problem were you solving? Who were the users? Give the reader enough background to understand why this project mattered. This is where you set the stage before getting into your process.
-          </p>
-          <p>
-            This section can be a few paragraphs. Don't be afraid to be specific — concrete details make case studies more believable and more interesting.
-          </p>
-        </div>
+    <!-- Section divider -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Overview</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
 
-        <!-- Full-width image -->
-        <div class="body-image">
-          <!-- <img src="../images/project-1-overview.jpg" alt="Overview image"> -->
-          <div class="body-image-placeholder">Full-width image — e.g. early sketches or research output</div>
-          <div class="body-image-caption">Caption: A short description of what's shown in this image.</div>
-        </div>
-
-        <!-- Section: The Problem -->
-        <div class="body-text">
-          <h3>The Problem</h3>
-          <p>
-            What was broken, missing, or unclear? Use real data if you can — user research quotes, metrics, support ticket themes. The more specific you are about the problem, the more compelling your solution will seem.
-          </p>
-          <p>
-            Avoid vague statements like "users were confused." Instead: "In testing, 7 of 8 participants couldn't find the settings panel without help, and support tickets about account management were the #1 category for three consecutive quarters."
-          </p>
-        </div>
-
-        <!-- Two-up images -->
-        <div class="body-two-up">
-          <div class="body-image">
-            <!-- <img src="../images/project-1-before.jpg" alt="Before state"> -->
-            <div class="body-image-placeholder">Before state</div>
-            <div class="body-image-caption">Before: The existing experience.</div>
-          </div>
-          <div class="body-image">
-            <!-- <img src="../images/project-1-research.jpg" alt="Research findings"> -->
-            <div class="body-image-placeholder">Research findings</div>
-            <div class="body-image-caption">Research: Key themes from user interviews.</div>
-          </div>
-        </div>
-
-        <!-- Section: The Approach -->
-        <div class="body-text">
-          <h3>The Approach</h3>
-          <p>
-            Walk through your design process at a high level. What methods did you use? How did you frame the problem? What constraints shaped your decisions (time, engineering lift, existing patterns)?
-          </p>
-          <p>
-            This is also a good place to show range — if you ran workshops, did competitive analysis, built prototypes, tested with users, talk about it here. Show that you think before you design.
-          </p>
-        </div>
-
-        <!-- Full-width image -->
-        <div class="body-image">
-          <!-- <img src="../images/project-1-process.jpg" alt="Design process"> -->
-          <div class="body-image-placeholder">Process image — explorations, wireframes, whiteboard sessions</div>
-          <div class="body-image-caption">Caption: Early explorations for the revised navigation structure.</div>
-        </div>
-
-        <!-- Section: The Solution -->
-        <div class="body-text">
-          <h3>The Solution</h3>
-          <p>
-            This is the payoff. Show and describe the final design. Focus on the decisions that mattered most — not every detail, but the key moves that made the design work. Why did you choose this approach over alternatives?
-          </p>
-          <p>
-            Connect your decisions back to the problem. "We surfaced account settings in the top nav because research showed users looked there first — and we validated this in usability testing before shipping."
-          </p>
-        </div>
-
-        <!-- Full-width image -->
-        <div class="body-image">
-          <!-- <img src="../images/project-1-final.jpg" alt="Final design"> -->
-          <div class="body-image-placeholder">Final design — your best, clearest screens</div>
-          <div class="body-image-caption">Caption: The final onboarding flow, shipping in v3.2.</div>
-        </div>
-
-        <!-- Section: Outcome -->
-        <div class="body-text">
-          <h3>Outcome</h3>
-          <p>
-            What happened after you shipped? Quantify impact where you can — metrics, retention, NPS, revenue, support ticket reduction. Even qualitative outcomes ("this became a template for how our team now approaches onboarding") are worth noting.
-          </p>
-          <p>
-            End with a reflection if it feels right — what you'd do differently, what you learned, or what came next.
-          </p>
-        </div>
-
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">This is an H2</h2>
+      <div class="pd-body">
+        <p>I'm a product designer with experience old enough to legally buy beer. I've had fun designing everything from observability &amp; data analytics apps to hospital websites to maps that track extremist hate groups. I'm scrappy. I prioritize shipping and iterating. I love building things with my team. I learn really fast, and I'm not afraid to jump in and push code.</p>
+        <p>Currently, I sling pixels and pull requests for ngrok. Before that, I was at Datadog and New Relic.</p>
+        <p>I also make music, hike, play with my dog, and generally love all that life in the Pacific Northwest has to offer... Except IPAs. IPAs are terrible.</p>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- ── Footer ── -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-left">
-          <span class="footer-name">Josh Riggs</span>
-          <span class="footer-tagline">Product Designer</span>
-        </div>
-        <ul class="footer-links">
-          <li><a href="mailto:hello@example.com">Email</a></li>
-          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-          <li><a href="https://dribbble.com" target="_blank">Dribbble</a></li>
-          <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-        </ul>
-      </div>
+    <!-- Support image 1 -->
+    <div class="pd-shots pd-col">
+      <img src="../images/project-1-support-1.png" alt="Project screens">
     </div>
-  </footer>
+
+    <!-- Section divider -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Overview</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">This is an H2</h2>
+      <div class="pd-body">
+        <p>I'm a product designer with experience old enough to legally buy beer. I've had fun designing everything from observability &amp; data analytics apps to hospital websites to maps that track extremist hate groups. I'm scrappy. I prioritize shipping and iterating. I love building things with my team. I learn really fast, and I'm not afraid to jump in and push code.</p>
+        <p>Currently, I sling pixels and pull requests for ngrok. Before that, I was at Datadog and New Relic.</p>
+        <p>I also make music, hike, play with my dog, and generally love all that life in the Pacific Northwest has to offer... Except IPAs. IPAs are terrible.</p>
+      </div>
+    </section>
+
+    <!-- Support image 2 -->
+    <div class="pd-shots pd-shots--single pd-col">
+      <img src="../images/project-1-support-2.png" alt="Project screen">
+    </div>
+
+  </main>
+
+  <!-- ── Footer / Contact ── -->
+  <section id="contact">
+    <footer class="contact">
+      <a class="contact-link" href="mailto:josh.riggs@gmail.com">Email me.</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/joshriggs/" target="_blank" rel="noopener">LinkedIn me.</a>
+      <div class="contact-kidding">
+        <span class="contact-link contact-link--struck">Follow me on Instagram.</span>
+        <span class="contact-jk">just kidding.</span>
+      </div>
+      <div class="contact-made">
+        <p>Made in Portland, OR, by me.</p>
+        <p class="contact-footnote"><span class="accent-pink">*</span>At least far as I know. We could all be living in a simulation, right? ¯\_(ツ)_/¯</p>
+      </div>
+    </footer>
+  </section>
 
   <script>
     const nav = document.getElementById('nav');
