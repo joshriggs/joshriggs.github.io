@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Tracking — Josh Riggs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/gate.js"></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav id="nav">
+    <a href="../index.html" class="nav-logo">Josh Riggs</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work" class="is-active">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Header + Hero imagery ── -->
+  <section class="pd-top">
+    <header class="pd-header">
+      <div class="pd-header-inner pd-col">
+        <div class="pd-title-group">
+          <a class="pd-back" href="../index.html#work">
+            <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg>
+            Recent Work
+          </a>
+          <h1 class="pd-title">Datadog Change Tracking</h1>
+        </div>
+        <p class="pd-subtitle">
+          Finding the root cause of a service or app outage can be like finding a needle in a haystack. I designed an interactive data visualization component to show relevant changes to a service, and an explorer to see changes across an entire system.
+        </p>
+
+        <div class="pd-meta">
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">Company</span>
+            <span class="pd-meta-value">Datadog</span>
+          </div>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">My role</span>
+            <span class="pd-meta-value">Design lead, visual and UX</span>
+          </div>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">My team</span>
+            <span class="pd-meta-value">1 PM, 1 EM, multiple IC engineers</span>
+          </div>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">Design tools</span>
+            <span class="pd-meta-value">Figma, Figjam, Sticky Notes, Research</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero image (browser chrome is part of the image) -->
+    <div class="pd-shots pd-col pd-col--hero">
+      <img src="../images/ct-hero.png" alt="Change Tracking widgets and explorer across several Datadog screens">
+    </div>
+  </section>
+
+  <!-- ── Main Content ── -->
+  <main class="pd-main">
+
+    <!-- Problem ───────────────────────────────────────── -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Problem</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">When an app or service goes down, engineers can get bombarded with alerts all related to the same problem.</h2>
+      <div class="pd-body">
+        <p>Sorting through these alerts and sources for a root cause could be like searching for a needle in a haystack. Adding to the complexity, there were the over 20 change types coming from 9 different data sources. <span class="hl">Our users wanted a way to see <strong>any change</strong> that could affect their service, regardless of where it came from.</span></p>
+      </div>
+    </section>
+
+    <!-- Process ───────────────────────────────────────── -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Process</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">Sometimes you get thrown to the wolves... but the wolves are actually really awesome teammates.</h2>
+      <div class="pd-body">
+        <p>As senior designer at Datadog, my specialty was helping newly formed product teams take a basic working prototype and turn it into a generally available feature that customers loved. I joined the Change Tracking team just after a basic proof of concept was shipped internally on using a limited pool of data.</p>
+        <p>Before starting any design work, I flew to NYC to spend the entire week getting to know my new product team. I led the team in a workshop to align on project goals, intended user roles, and key workflows that we would be focusing on. During and after the workshop, I helped the team map out the existing user paths, group and categorize all the current and upcoming change types, and brainstormed possible solutions. From there, we used these artifacts to prioritize the work and set team goals.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/ct-workshop.png" alt="A collage of workshop artifacts: maps, groupings, and sketches">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>A collage of artifacts that came from the workshop and set the path forward</span>
+        </figcaption>
+      </figure>
+
+      <div class="pd-body">
+        <p>As I was working on the solutions below, I led a research campaign that included several 1:1 interviews with internal and external users, the results of which informed iterations along the way. I also conducted multiple design reviews with executive stakeholders from engineering, product, and design.</p>
+        <p>This project had a lot of organizational and technical complexity, which required me to have a very adaptive design process. My general approach was to design with the engineers as they built things, and unblock them by solving design problems as they came up. Waterfall, this was not.</p>
+      </div>
+    </section>
+
+    <!-- Solution ──────────────────────────────────────── -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Solution</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">Part 1: Change Widgets</h2>
+      <div class="pd-body">
+        <p>My first task after onboarding was to audit the existing data visualization component (“Change Widget”) and everywhere it occurred in the product. The solution: a simpler user flow consisting of a tailored Change Widget on the Service Page, User Dashboard, and User Monitor, all leading to a unified “Change Detail” view with more info about the change. Change types included Deployments, Feature Flags, Database Changes, Kubernetes Changes, and other relevant changes that could cause a service to go down.</p>
+      </div>
+
+      <div class="pd-figrow">
+        <figure class="pd-figure">
+          <img src="../images/ct-poc.png" alt="The initial proof of concept built by engineering">
+          <figcaption class="pd-caption">
+            <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+            <span>The initial POC that the engineering team built</span>
+          </figcaption>
+        </figure>
+        <figure class="pd-figure">
+          <img src="../images/ct-flow.png" alt="The simplified user flow with three entry points into a unified side panel">
+          <figcaption class="pd-caption">
+            <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+            <span>The simplified user flow: a change widget with 3 different entry points that opens a unified side panel.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="pd-section pd-col">
+      <h3 class="pd-h3">On the Service Page</h3>
+      <div class="pd-body">
+        <p>Since the Change Detail views were functional, I decided to focus first on improving the widget design on the Service Page. After several iterations based on user and stakeholder feedback, I landed on the designs below. The overall idea is that users can see the time and duration of any relevant change to the service, hover to compare it to performance spikes on other charts, and click in to view more details about the change.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/ct-service-1.png" alt="The initial view of the Recent Changes widget on a service page">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>This is the initial view of the Recent Changes widget on a service page.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="pd-figure">
+        <img src="../images/ct-service-2.png" alt="Hovering a change imposes its duration across every other chart on the page">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>Hovering imposes the duration of the change on every other chart and graph on the page. This lets users easily compare the change any other performance spikes and see if a correlation is possible.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="pd-figure">
+        <img src="../images/ct-service-3.png" alt="Several states and variations of the Change Widget">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>I designed several states and variations of the widget. Some services could have hundreds of changes to show in a short amount of time, while others could have 1 or 2. And depending on the situation, it may be more helpful to see changes grouped by type, or listed out 1 by 1.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="pd-section pd-col">
+      <h3 class="pd-h3">Side Panels</h3>
+      <div class="pd-body">
+        <p>Designing a unified detail view (a.k.a., “side panel”) for several very different types of changes was no easy task. I designed a layout template based on questions users needed answers for: What happened, when did it happen, how bad is it, and who do I contact to get it resolved if I can’t do it myself? Each different change type could have its own relevant data and content while still retaining visual consistency.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/ct-sidepanel-1.png" alt="A Feature Flag side panel next to the unified layout template">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>An example of the Feature Flag side panel next to the unified layout template</span>
+        </figcaption>
+      </figure>
+
+      <figure class="pd-figure">
+        <img src="../images/ct-sidepanel-2.png" alt="Detail views of the side panel design">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>Details of the side panel design</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="pd-section pd-col">
+      <h3 class="pd-h3">Monitors, Dashboards</h3>
+      <div class="pd-body">
+        <p>As I mentioned above, I also adapted the widget design to work on Monitors and Dashboards.</p>
+      </div>
+
+      <div class="pd-figrow">
+        <figure class="pd-figure">
+          <img src="../images/ct-monitor.png" alt="The Change Widget on a monitor">
+          <figcaption class="pd-caption">
+            <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+            <span>On a monitor</span>
+          </figcaption>
+        </figure>
+        <figure class="pd-figure">
+          <img src="../images/ct-dashboard.png" alt="The Change Widget on a dashboard">
+          <figcaption class="pd-caption">
+            <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+            <span>On a dashboard (older visual design)</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">Part 2: Change Explorer</h2>
+      <div class="pd-body">
+        <p>Seeing all the changes on a specific service is awesome, but what if there’s a problem that spans multiple services, or the exact services affected are unknown? <span class="hl">Enter the “Change Explorer,” a way to see <strong>all changes</strong> across an entire instrumented system for a given time frame.</span> This idea started as sketches I made with a staff engineer after asking ourselves the same questions.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/ct-explorer-wire.png" alt="Basic wireframes of the first Change Explorer iteration">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>Basic wireframes of the first iteration</span>
+        </figcaption>
+      </figure>
+
+      <div class="pd-body">
+        <p>From there, I continued to work directly with engineers to design and build the Change Explorer into a feature that we could first ship internally, and to some early beta users. After several iterations, the screen below is what we shipped.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/ct-explorer-1.png" alt="The shipped Change Explorer with its design details">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>The design details of the Change Explorer</span>
+        </figcaption>
+      </figure>
+
+      <figure class="pd-figure">
+        <img src="../images/ct-explorer-2.png" alt="Additional details of the Change Explorer row design and filtering">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>Additional details of the row design and filtering</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Results ───────────────────────────────────────── -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Results</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">What impact did my design have?</h2>
+      <ul class="pd-list">
+        <li>The internal and external users I spoke to had overwhelmingly positive design feedback.</li>
+        <li>Many users wanted an additional list view that was separate from the widget. I was exploring this when I left Datadog.</li>
+        <li>“This is such a technical project – I can’t believe how quickly Josh onboarded and started contributing!” (Note from EM).</li>
+        <li>The research I conducted directly influenced the team’s roadmap for multiple quarters.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ── Footer / Contact ── -->
+  <section id="contact">
+    <footer class="contact">
+      <a class="contact-link" href="mailto:josh.riggs@gmail.com">Email me.</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/joshriggs/" target="_blank" rel="noopener">LinkedIn me.</a>
+      <div class="contact-kidding">
+        <span class="contact-link contact-link--struck">Follow me on Instagram.</span>
+        <span class="contact-jk">just kidding.</span>
+      </div>
+      <div class="contact-made">
+        <p>Made in Portland, OR, by me.</p>
+        <p class="contact-footnote"><span class="accent-pink">*</span>At least far as I know. We could all be living in a simulation, right? ¯\_(ツ)_/¯</p>
+      </div>
+    </footer>
+  </section>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+
+</body>
+</html>
