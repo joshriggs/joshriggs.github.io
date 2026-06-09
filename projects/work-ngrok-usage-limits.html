@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usage &amp; Limits — Josh Riggs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/gate.js"></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav id="nav">
+    <a href="../index.html" class="nav-logo">Josh Riggs</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work" class="is-active">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Header + Hero imagery ── -->
+  <section class="pd-top">
+    <header class="pd-header">
+      <div class="pd-header-inner pd-col">
+        <div class="pd-title-group">
+          <a class="pd-back" href="../index.html#work">
+            <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg>
+            Recent Work
+          </a>
+          <h1 class="pd-title">ngrok Usage &amp; Limits</h1>
+        </div>
+        <p class="pd-subtitle">
+          When ngrok launched usage-based pricing, our Usage page needed to keep up. At the same time, customers were complaining about hitting limits they never knew existed. I designed an experience that makes usage and limits clear at a glance, so there are no surprises.
+        </p>
+
+        <div class="pd-meta">
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">Company</span>
+            <span class="pd-meta-value">ngrok</span>
+          </div>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">My role</span>
+            <span class="pd-meta-value">Design lead, visual and UX</span>
+          </div>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">My team</span>
+            <span class="pd-meta-value">Myself, 1 PM / tech lead, multiple engineers</span>
+          </div>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">Design tools</span>
+            <span class="pd-meta-value">Figma, Figjam, Claude</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero image (browser chrome is part of the image) -->
+    <div class="pd-shots pd-col pd-col--hero">
+      <img src="../images/ul-hero.png" alt="The Usage &amp; Limits overview and Limits detail screens in the ngrok dashboard">
+    </div>
+  </section>
+
+  <!-- ── Main Content ── -->
+  <main class="pd-main">
+
+    <!-- Problem ───────────────────────────────────────── -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Problem</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">Nobody likes a surprise bill or data throttle.</h2>
+      <div class="pd-body">
+        <p>One of the first projects at ngrok was to finish a redesign of the Usage page that had already been through a few explorations before I arrived. As the team and I dug in, we realized that we also needed a way to communicate when usage was about to hit a limit, so customers wouldn’t end up with either a surprise bill or a costly service interruption. Easy, right? Well, no, not really...</p>
+        <p>There were 2 major challenges the team and I had to design around. First, our billing platform, Orb, had some extreme limitations on what data reporting we could get back from it. Second, the kinds of limits customers could hit with their usage were extremely varied. Some, like IP Policies, could be upgraded by request, but would cause service interruption in the meantime. Others could cause an immediate billing increase for any overage. A third type could not be upgraded, didn’t contribute to the bill cost, but did throttle data. And a fourth type, like Secrets Per Vault, had an X per Y limit: Users could have 500 vaults, each with 500 secrets. Yikes.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/ul-limit-types.png" alt="A table of all the possible limits a user could hit with their usage and endpoint traffic">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>This is a screenshot of all the possible limits a user could hit with their usage and endpoint traffic (endpoint is a basic building block of the ngrok platform).</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Process ───────────────────────────────────────── -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Process</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">Usage &amp; Limits is like electricity: you only care about it when you get a big bill, or when you don’t have it.*</h2>
+      <div class="pd-body">
+        <p>Once I was onboarded to the team and we made the decision to add Limits to the Usage project, I started working on a way to combine the two into one seamless experience. I proposed a Usage &amp; Limits “hub,” which included an Endpoint Activity breakdown page, for even more granularity into usage and limits.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/ul-page-flows.png" alt="A diagram of the overall user flow of the Usage &amp; Limits experience">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>The overall user flow of the Usage &amp; Limits experience</span>
+        </figcaption>
+      </figure>
+
+      <div class="pd-body">
+        <p>After creating some rough sketches in Whimsical (which I no longer have, I’m sooooo sorry), I started mapping out flows and screens with our actual component library in Figma. Below is just one example of several iterations. Don’t worry, you don’t need to zoom in on your browser to 7000%. I’ll show all the gory details in just a bit. Want to know more about ideas and explorations that didn’t make the final cut? I’ll be happy to walk through them in a 1:1 setting.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/ul-first-iteration.png" alt="One of the early iterations of Usage &amp; Limits flows and screens in Figma">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>One of the early iterations of flows and screens</span>
+        </figcaption>
+      </figure>
+
+      <div class="pd-body">
+        <p>My design process for Usage &amp; Limits had me mostly in Figma working out details, flows, and states. I met with the project’s tech lead / pm on a daily basis at the beginning to iterate rapidly. Once we got things to a more cohesive state, we started getting design feedback from a handful of customers via Slack and Zoom. When we were confident with the feedback, I started working directly with front and back end engineers to make sure my ideas were communicated clearly, and to solve any design problems that inevitably came up when testing with real data.</p>
+      </div>
+    </section>
+
+    <!-- Solution ──────────────────────────────────────── -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Solution</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
+
+    <section class="pd-section pd-col">
+      <div class="pd-body">
+        <p>As shown above in the Process section, I designed a Usage and Limits hub consisting of:</p>
+        <ul>
+          <li>A Usage &amp; Limits Overview page</li>
+          <li>A Usage detail page</li>
+          <li>A Limits detail page</li>
+          <li>An Endpoint Activity detail page (not shown for brevity, you ain’t got all day.)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="pd-section pd-col">
+      <h3 class="pd-h3">Usage &amp; Limits Overview</h3>
+      <div class="pd-body">
+        <p>This is the first screen of the hub, and where users land if they click “Usage &amp; Limits” in the primary nav. It’s meant to show the highest level information of all the 3 sub pages.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/ul-overview.png" alt="The Usage &amp; Limits Overview page with annotated design details">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>In this case, there are multiple limits the user is either hitting, or has already hit. If there are no limits needing attention, then there’s a basic “thumbs up, all good” message.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="pd-section pd-col">
+      <h3 class="pd-h3">Usage Detail</h3>
+      <div class="pd-body">
+        <p>This is the screen that shows anything directly related to the cost of a users’ monthly “pay-as-you-go” bill, and are not considered a limit.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/ul-usage-detail.png" alt="The Usage Detail page with annotated design details">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>To anyone who’s looked at a breakdown of their phone or computer’s memory allocation, this should look familiar.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="pd-section pd-col">
+      <h3 class="pd-h3">Limits Detail</h3>
+      <div class="pd-body">
+        <p>With Limits having a lot more complexity than Usage, I wanted to design a table that clearly communicated what the current limit status was, what the range of the limit was, and what could be done to mitigate a limit issue. More details on the table row design below.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/ul-limits-detail.png" alt="The Limits Detail page with annotated design details">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>Limits follows the same basic layout as Usage: Overview at the top, and a detailed breakdown by category for the rest of the page.</span>
+        </figcaption>
+      </figure>
+
+      <div class="pd-body">
+        <p>To account for the added complexity of Limits, I created this mini design system of all the possible states that a limit could be in.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/ul-row-states.png" alt="A mini design system showing all the possible states a limit row could be in">
+      </figure>
+
+      <div class="pd-body">
+        <p>*While <strong>most</strong> users don’t care about usage and limits unless they’re a problem, some users really like to dig into the technical details of limits. Like is it possible to actually hit MAX_SAFE_INTEGER number of HTTP Connections per Month? Challenge accepted! For those users, we have all the info they need in Docs.</p>
+      </div>
+    </section>
+
+    <!-- Results ───────────────────────────────────────── -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Results</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">What impact did my design have?</h2>
+      <ul class="pd-list">
+        <li>This new feature gave users access to billing and usage data that was previously hidden to them.</li>
+        <li>The feature is just now rolling out to GA users. Early feedback is positive, but I’ll update this with real metrics when I have them.</li>
+        <li>This is just the foundation of Billing &amp; Usage communication in the ngrok product. Next, I will be exploring ways to surface Billing &amp; Usage alerts to users in the app, via email, and in command line.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ── Footer / Contact ── -->
+  <section id="contact">
+    <footer class="contact">
+      <a class="contact-link" href="mailto:josh.riggs@gmail.com">Email me.</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/joshriggs/" target="_blank" rel="noopener">LinkedIn me.</a>
+      <div class="contact-kidding">
+        <span class="contact-link contact-link--struck">Follow me on Instagram.</span>
+        <span class="contact-jk">just kidding.</span>
+      </div>
+      <div class="contact-made">
+        <p>Made in Portland, OR, by me.</p>
+        <p class="contact-footnote"><span class="accent-pink">*</span>At least far as I know. We could all be living in a simulation, right? ¯\_(ツ)_/¯</p>
+      </div>
+    </footer>
+  </section>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+
+</body>
+</html>
