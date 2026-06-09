@@ -9,8 +9,8 @@
 :root {
   /* Design system */
   --strong:      #ffffff;   /* strong text            */
-  --body:        #a0a0a0;   /* body text              */
-  --muted:       #777575;   /* muted text             */
+  --body:        #cccccc;   /* body text              */
+  --muted:       #aeaeae;   /* muted text             */
   --bg:          #151515;   /* page background        */
   --bg-accent:   #202020;   /* lighter accent panels  */
   --bg-footer:   #101010;   /* footer / contact dark  */
@@ -582,7 +582,7 @@ h4 {
   font-weight: 400;
   font-size: clamp(1.1rem, 2.2vw, 27px);
   line-height: 1.5;
-  color: #6b6b6b;
+  color: var(--body);
   max-width: 923px;
 }
 
@@ -614,7 +614,7 @@ h4 {
   font-weight: 400;
   font-size: 0.75rem;
   letter-spacing: 0.02em;
-  color: var(--body);
+  color: var(--strong);
 }
 
 /* ── Project images ── */
@@ -685,7 +685,7 @@ h4 {
   font-weight: 400;
   font-size: clamp(1.05rem, 1.8vw, 21px);
   line-height: 1.5;
-  color: #a0a0a0;
+  color: var(--body);
 }
 
 /* Inline emphasis within body copy */
@@ -743,7 +743,7 @@ h4 {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #808080;
+  color: var(--muted);
 }
 
 /* Two images side by side */
@@ -772,7 +772,7 @@ h4 {
   font-weight: 400;
   font-size: clamp(1.05rem, 1.8vw, 21px);
   line-height: 1.5;
-  color: #a0a0a0;
+  color: var(--body);
 }
 /* ── Password Gate ────────────────────────────────────────── */
 
