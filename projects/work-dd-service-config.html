@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APM Service Configuration — Josh Riggs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/gate.js"></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav id="nav">
+    <a href="../index.html" class="nav-logo">Josh Riggs</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work" class="is-active">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Header + Hero imagery ── -->
+  <section class="pd-top">
+    <header class="pd-header">
+      <div class="pd-header-inner pd-col">
+        <div class="pd-title-group">
+          <a class="pd-back" href="../index.html#work">
+            <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg>
+            Recent Work
+          </a>
+          <h1 class="pd-title">APM Service Configuration</h1>
+        </div>
+        <p class="pd-subtitle">
+          Service owners had poor visibility into how their services were configured, and configuring the services was confusing and overly complex. I brought clarity and simplicity.
+        </p>
+
+        <div class="pd-meta">
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">Company</span>
+            <span class="pd-meta-value">Datadog</span>
+          </div>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">My role</span>
+            <span class="pd-meta-value">Design lead, visual and UX</span>
+          </div>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">My team</span>
+            <span class="pd-meta-value">Myself, 1 PM, 1 EM</span>
+          </div>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">Design tools</span>
+            <span class="pd-meta-value">Figma, Figjam, ChatGPT</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero image (browser chrome is part of the image) -->
+    <div class="pd-shots pd-col pd-col--hero">
+      <img src="../images/sc-hero.png" alt="The Unified Service Settings page and Settings Hub screens in the Datadog app">
+    </div>
+  </section>
+
+  <!-- ── Main Content ── -->
+  <main class="pd-main">
+
+    <!-- Problem ───────────────────────────────────────── -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Problem</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">Configuration is just a means to an end for a desired outcome.</h2>
+      <div class="pd-body">
+        <p>This project started with 2 configuration-based OKRs assigned to me. As I became familiar with the user needs for these two tickets, I realized that the problem was much larger.</p>
+        <p>I audited the entire Datadog platform for anywhere services could be configured, and discovered 8 different screens, flows, and pages, not including configurations in local code and environment variables.</p>
+        <p>I then wrote a design proposal for a single hub for service configuration, from initial instrumentation to complete observability. I used this proposal, which I called “Service Lifecycle Management,” to build momentum and excitement, and ideally get PM and Engineering resource approval.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/sc-config-proposal.png" alt="Screenshots from the Service Lifecycle Management proposal doc">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>Screenshots from my “Service Lifecycle Management” proposal doc</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Process ───────────────────────────────────────── -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Process</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">Discovery &amp; Alignment</h2>
+      <div class="pd-body">
+        <p>As the idea gained momentum, I partnered with a designer whose team was building an experience for automatically discovering services on infrastructure.</p>
+        <p>Both problems shared configuration as a common thread, so we mapped the entire lifecycle of a service: from discovery on infrastructure, to instrumentation with the Datadog agent, through the various states of telemetry and observability.</p>
+        <p>This lifecycle map became central to our updated proposal doc, which we used to estimate the work and get buy-in from PM and Engineering leadership.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/sc-lifecycle-map.png" alt="The full map of a service lifecycle, from deployment to complete telemetry">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>The full map of a service lifecycle, from deployment to complete telemetry</span>
+        </figcaption>
+      </figure>
+
+      <div class="pd-body">
+        <p>The final alignment step was a workshop I led with core stakeholders to define user stories and requirements.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/sc-workshop.png" alt="Screenshot of the Figjam card sorting workshop">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>Screenshot of the Figjam card sorting workshop</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">Initial Design Explorations</h2>
+      <div class="pd-body">
+        <p>Now that we had alignment, commitment, and excitement, I wrote our primary and secondary user stories, and mapped them out as user flows.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/sc-ux-flows.png" alt="Example of user flows for key stories">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>Example of user flows for key stories</span>
+        </figcaption>
+      </figure>
+
+      <div class="pd-body">
+        <p>Next, I explored several different iterations on those core user flows, with mockups and prototypes of varying fidelity. I led pair design sessions with other team leads, and a weekly design meeting with key stakeholders. Throughout the process, I got feedback from internal Datadog users, early access customers, and our lead Support Engineer.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/sc-early-designs-1.png" alt="Early wireframes for the service configuration flows">
+      </figure>
+
+      <figure class="pd-figure">
+        <img src="../images/sc-early-designs-2.png" alt="Mid-fidelity designs for the service configuration flows">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>Example of early wireframes and mid-fidelity designs</span>
+        </figcaption>
+      </figure>
+
+      <div class="pd-body">
+        <p>Once the team and I were aligned on the core flow designs, I designed a mid-fi prototype to get the first round of user and internal stakeholder feedback.</p>
+        <p>I designed this concept around the settings being grouped into 3 primary categories: Instrumentation, Service Settings, and Product &amp; Features. Since our research showed most users are looking for specific features in these categories, my hope was to reduce cognitive load by separating them into tabs.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/sc-first-iteration.png" alt="Screens from the first mid-fi prototype, showing the Instrumentation, Service Settings, and Product &amp; Features tabs">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>Screens from the first mid-fi prototype</span>
+        </figcaption>
+      </figure>
+
+      <div class="pd-body">
+        <p>Next, I presented the prototype to executive design, product, and engineering leadership. We received good feedback, but were also challenged on some things. They really loved seeing all the once separated configurations together in one place. On the other hand, the 3-category grouping was a hard sell.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/sc-exec-preso.png" alt="Slides from the presentation to executive design, product, and engineering leadership">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>Slides from the executive leadership presentation</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Solution ──────────────────────────────────────── -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Solution</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">Final Iteration Designs</h2>
+    </section>
+
+    <section class="pd-section pd-col">
+      <h3 class="pd-h3">Unified Settings Page</h3>
+      <div class="pd-body">
+        <p>After compiling all the stakeholder and user feedback we had so far, I redesigned the single-service configuration experience to be a “Unified Service Settings page.” Every service would have one, and it would be easily accessible from a Service Detail page.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/sc-unified-settings.png" alt="The Unified Service Settings page with annotated design details">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>All of a Service’s settings, conveniently in one screen</span>
+        </figcaption>
+      </figure>
+
+      <figure class="pd-figure">
+        <img src="../images/sc-row-detail.png" alt="The expanded configuration row with annotated design details">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>The expanded row is designed to answer all the critical questions a user has about a configuration.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="pd-section pd-col">
+      <h3 class="pd-h3">Settings Hub</h3>
+      <div class="pd-body">
+        <p>When the single service experience was complete, I designed a hub where users could access configurations for all of their services.</p>
+      </div>
+
+      <figure class="pd-figure">
+        <img src="../images/sc-settings-hub.png" alt="The Settings Hub page with annotated design details">
+        <figcaption class="pd-caption">
+          <svg class="pd-caption-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          <span>For the first time ever, users could see how every one of their services was configured and instrumented, all in one place.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Results ───────────────────────────────────────── -->
+    <div class="pd-rule pd-col">
+      <span class="section-label">Results</span>
+      <span class="arrows" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o60" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        <svg class="arrow o30" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </span>
+    </div>
+
+    <section class="pd-section pd-col">
+      <h2 class="pd-h2">What impact did my design have?</h2>
+      <ul class="pd-list">
+        <li>Internal and external early access users had very positive feedback.</li>
+        <li>I mapped service instrumentation in a way that hadn’t been done before at Datadog, and this map was shared widely throughout the APM engineering org.</li>
+        <li>Users finally had visibility into how their services were configured in one single place.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ── Footer / Contact ── -->
+  <section id="contact">
+    <footer class="contact">
+      <a class="contact-link" href="mailto:josh.riggs@gmail.com">Email me.</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/joshriggs/" target="_blank" rel="noopener">LinkedIn me.</a>
+      <div class="contact-kidding">
+        <span class="contact-link contact-link--struck">Follow me on Instagram.</span>
+        <span class="contact-jk">just kidding.</span>
+      </div>
+      <div class="contact-made">
+        <p>Made in Portland, OR, by me.</p>
+        <p class="contact-footnote"><span class="accent-pink">*</span>At least far as I know. We could all be living in a simulation, right? ¯\_(ツ)_/¯</p>
+      </div>
+    </footer>
+  </section>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+
+</body>
+</html>
