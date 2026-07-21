@@ -27,7 +27,7 @@
 
   --gutter:      clamp(1.5rem, 6vw, 90px);
 
-  /* Legacy aliases (used by project detail page + gate) */
+  /* Legacy aliases (used by project detail page) */
   --text:        var(--strong);
   --text-muted:  var(--body);
   --accent:      var(--purple);
@@ -774,85 +774,6 @@ h4 {
   line-height: 1.5;
   color: var(--body);
 }
-/* ── Password Gate ────────────────────────────────────────── */
-
-#gate {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--gutter);
-}
-
-.gate-card {
-  width: 100%;
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  text-align: left;
-}
-
-.gate-title {
-  font-family: var(--font-body);
-  font-weight: 600;
-  color: var(--strong);
-}
-
-.gate-text {
-  margin-bottom: 0.5rem;
-  color: var(--body);
-}
-
-#gate-form {
-  display: flex;
-  gap: 0.75rem;
-}
-
-#gate-input {
-  flex: 1;
-  background: var(--bg-accent);
-  border: 1px solid var(--border);
-  color: var(--strong);
-  font-family: var(--font-body);
-  font-size: 1rem;
-  padding: 0.85rem 1rem;
-  border-radius: 4px;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-#gate-input:focus {
-  border-color: var(--purple);
-}
-
-#gate-form button {
-  background: var(--purple);
-  color: #ffffff;
-  border: none;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.85rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-#gate-form button:hover {
-  opacity: 0.85;
-}
-
-.gate-error {
-  color: var(--pink);
-  font-size: 0.85rem;
-  min-height: 1.2em;
-  margin: 0;
-}
-
 /* ── Responsive ───────────────────────────────────────────── */
 
 @media (max-width: 900px) {
